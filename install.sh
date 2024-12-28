@@ -71,3 +71,7 @@ if [[ -z "$(find ~/.ssh -name "*.pub" 2>/dev/null)" ]] && [[ "$(git config --glo
   cat ~/.ssh/id_ed25519.pub
   echo -e "\n"
 fi
+
+if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v ansible)" = "" ]]; then
+  sudo dnf install ansible
+fi
