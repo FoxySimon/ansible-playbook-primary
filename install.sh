@@ -33,6 +33,10 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v stea
   sudo dnf install steam
 fi
 
+if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v pip)" = "" ]]; then
+  sudo dnf install python3-pip
+fi
+
 if [[ -z "$(git config --global user.email)" ]]; then
   echo "Your email is not set in git global config"
   echo -n "Type your email to be set: "
