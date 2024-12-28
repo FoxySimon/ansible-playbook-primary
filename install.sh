@@ -22,6 +22,11 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v nvim
   git config --global core.editor "nvim"
 fi
 
+if [[ -z "$(command -v lazygit)" ]]; then
+  sudo dnf copr enable atim/lazygit -y
+  sudo dnf install lazygit
+fi
+
 if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v fzf)" = "" ]]; then
   sudo dnf install fzf
 fi
