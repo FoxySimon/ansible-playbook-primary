@@ -1,6 +1,6 @@
 # Role dependencies
 roles:
-  - name: ansible-role-workstation
-    src: https://github.com/FoxySimon/ansible-role-workstation.git
+  - name: ansible-role-oh-my-zsh
+    src: https://github.com/ctorgalson/ansible-role-oh-my-zsh.git
     scm: git
 

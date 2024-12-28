@@ -8,7 +8,6 @@
 - hosts:
     - workstations
     - localhost
-  become: true
   roles:
-    - ansible-role-workstation
+    - ansible-role-oh-my-zsh
 
