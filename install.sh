@@ -77,9 +77,8 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v ansi
   sudo dnf install ansible
 fi
 
-CMD="ansible-playbook local.yaml"
-echo "Do you want to run $CMD (this is last step, ^C if don't wanna continue)"
+CMD="sudo ansible-galaxy install -r requirements.yaml --force && sudo ansible-playbook local.yaml"
+echo "Do you want to run \`$CMD\` (this is last step, ^C if don't wanna continue)"
 read -r
 
-ansible-galaxy install -r requirements.yaml
 eval "$CMD"
