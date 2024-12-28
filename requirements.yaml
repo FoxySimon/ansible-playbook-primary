@@ -1,0 +1,6 @@
+# Role dependencies
+roles:
+  - name: ansible-role-workstation
+    src: https://github.com/FoxySimon/ansible-role-workstation.git
+    scm: git
+
