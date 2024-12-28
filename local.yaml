@@ -9,5 +9,5 @@
     - workstations
     - localhost
   roles:
-    - ansible-role-oh-my-zsh
+    - ansible-role-zsh
 
