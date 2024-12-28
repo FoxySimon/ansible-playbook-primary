@@ -56,3 +56,13 @@ if [[ -z "$(git config --global user.name)" ]]; then
 
   echo git config --global user.name: "$(git config --global user.name)"
 fi
+
+if [[ -z "$(find ~/.ssh -name "*.pub" 2>/dev/null)" ]] && [[ "$(git config --global user.email)" ]]; then
+  echo "SSH dir not found. Creating a new ED25519 SSH key..."
+
+  ssh-keygen -t ed25519 -C "$(git config --global user.email)" -f ~/.ssh/id_ed25519 -N ""
+
+  echo -e "\nHere is your public SSH key. Add it to your Git provider (GitHub, GitLab, etc.):\n"
+  cat ~/.ssh/id_ed25519.pub
+  echo -e "\n"
+fi
