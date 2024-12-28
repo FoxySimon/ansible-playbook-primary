@@ -10,7 +10,6 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v brav
   sudo dnf install brave-browser
 fi
 
-set +x
 if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v nvim)" = "" ]]; then
   echo "Istalling nvim!"
   echo "RETURN to continue, otherwise ^C" && read -r
@@ -19,6 +18,8 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v nvim
 
   git clone https://github.com/LazyVim/starter ~/.config/nvim
   rm -rf ~/.config/nvim/.git
+
+  git config --global core.editor "nvim"
 fi
 
 if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v fzf)" = "" ]]; then
@@ -32,4 +33,22 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v stea
   sudo dnf install steam
 fi
 
-set -x
+if [[ -z "$(git config --global user.email)" ]]; then
+  echo "Your email is not set in git global config"
+  echo -n "Type your email to be set: "
+
+  read -r EMAIL
+  git config --global user.email "$EMAIL"
+
+  echo git config --global user.email: "$(git config --global user.email)"
+fi
+
+if [[ -z "$(git config --global user.name)" ]]; then
+  echo "Your name is not set in git global config"
+  echo -n "Type your name to be set: "
+
+  read -r NAME
+  git config --global user.name "$NAME"
+
+  echo git config --global user.name: "$(git config --global user.name)"
+fi
