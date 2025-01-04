@@ -1,3 +1,0 @@
-# Host-specific variables
-zsh_source_for_all_users: yes
-zsh_user: "simon"

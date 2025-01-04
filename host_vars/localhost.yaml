@@ -1,0 +1,15 @@
+# Host-specific variables
+zsh_source_for_all_users: yes
+zsh_user: "simon"
+
+# Additional Zsh plugins
+zsh_antigen_bundles_extras:
+  - git
+  - git-auto-fetch
+  - zsh-autosuggestions
+  - z
+  - sudo
+  - aws
+  - aliases
+  - command-not-found
+  - docker
