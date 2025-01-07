@@ -43,6 +43,10 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v pip)
   sudo dnf install python3-pip
 fi
 
+if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v aws)" = "" ]]; then
+  sudo dnf install awscli2
+fi
+
 if [[ -z "$(git config --global user.email)" ]]; then
   echo "Your email is not set in git global config"
   echo -n "Type your email to be set: "
