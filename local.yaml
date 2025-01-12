@@ -10,4 +10,5 @@
     - localhost
   roles:
     - ansible-role-zsh
+    - ansible-role-workstation
 

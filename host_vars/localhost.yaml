@@ -13,3 +13,6 @@ zsh_antigen_bundles_extras:
   - aliases
   - command-not-found
   - docker
+
+
+workstation_user: "simon"
