@@ -55,6 +55,10 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v helm
   sudo dnf install helm
 fi
 
+if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v keepass)" = "" ]]; then
+  sudo dnf install keepass
+fi
+
 if [[ -z "$(git config --global user.email)" ]]; then
   echo "Your email is not set in git global config"
   echo -n "Type your email to be set: "
