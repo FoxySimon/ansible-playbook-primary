@@ -16,3 +16,4 @@ zsh_antigen_bundles_extras:
 
 
 workstation_user: "simon"
+zsh_powerlevel10k_instant_prompt: no
