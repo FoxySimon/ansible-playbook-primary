@@ -9,6 +9,7 @@
     - workstations
     - localhost
   roles:
-    - ansible-role-zsh
-    - ansible-role-workstation
+    - ansible-role-backup
+    #- ansible-role-zsh
+    #- ansible-role-workstation
 
