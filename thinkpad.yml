@@ -6,7 +6,7 @@
       ansible.builtin.ping:
 
     - debug:
-        var: "{{ ansible_hostname }}"
+        var: "ansible_hostname"
 #
 # - hosts:
 #     - workstations
