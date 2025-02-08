@@ -6,7 +6,7 @@
       ansible.builtin.ping:
 
     - debug:
-        var: "{{ zsh_powerlevel10k_instant_prompt }}"
+        var: "{{ ansible_hostname }}"
 #
 # - hosts:
 #     - workstations
