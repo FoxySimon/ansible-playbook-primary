@@ -1,0 +1,12 @@
+---
+- name: Ping localhost
+  hosts: localhost
+  tasks:
+    - name: Ping test
+      ansible.builtin.ping:
+
+- hosts:
+    - localhost
+  roles:
+    - ansible-role-base
+
