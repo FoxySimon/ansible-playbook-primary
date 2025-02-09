@@ -3,3 +3,7 @@ roles:
   - name: ansible-role-zsh
     src: https://github.com/viasite-ansible/ansible-role-zsh.git
     scm: git
+
+  - name: ansible-role-base
+    src: https://github.com/FoxySimon/ansible-role-base.git
+    scm: git
