@@ -6,4 +6,5 @@ roles:
 
   - name: ansible-role-base
     src: https://github.com/FoxySimon/ansible-role-base.git
+    version: base-funcs
     scm: git
