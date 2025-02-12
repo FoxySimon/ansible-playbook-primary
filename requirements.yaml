@@ -8,3 +8,7 @@ roles:
     src: https://github.com/FoxySimon/ansible-role-base.git
     version: base-funcs
     scm: git
+
+  - name: willshersystems.sshd
+    src: https://github.com/willshersystems/ansible-sshd.git
+    scm: git
