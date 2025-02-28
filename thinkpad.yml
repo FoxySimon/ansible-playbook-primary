@@ -1,0 +1,17 @@
+---
+- name: Ping localhost
+  hosts: localhost
+  tasks:
+    - name: Ping test
+      ansible.builtin.ping:
+
+    - debug:
+        var: "zsh_powerlevel10k_instant_prompt"
+
+- hosts:
+    - localhost
+  roles:
+    # - ansible-role-backup
+    - ansible-role-zsh
+    # - ansible-role-workstation
+
