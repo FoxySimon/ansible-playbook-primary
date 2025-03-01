@@ -6,7 +6,7 @@ roles:
 
   - name: ansible-role-base
     src: https://github.com/FoxySimon/ansible-role-base.git
-    version: base-funcs
+    version: master
     scm: git
 
   - name: willshersystems.sshd
