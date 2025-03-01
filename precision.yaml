@@ -1,15 +1,12 @@
 ---
 - name: Ping localhost
-  hosts: localhost
+  hosts: 
+    - workstations
   tasks:
     - name: Ping test
       ansible.builtin.ping:
-
-- hosts:
-    - workstations
-    - localhost
   roles:
     - ansible-role-backup
     - ansible-role-zsh
-    - ansible-role-workstation
+    #- ansible-role-workstation
 
