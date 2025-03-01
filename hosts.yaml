@@ -1,7 +1,7 @@
 ---
-all:
+workstations:
   hosts:
-    localhost:
-      ansible_connection: local
-      ansible_user: ansible
+    precision:
+      ansible_user: ansible_operator
+      ansible_host: 192.168.0.11
 
