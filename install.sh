@@ -93,9 +93,9 @@ if [[ "$ID" = "fedora" ]] && [[ "$VERSION_ID" -ge 41 ]] && [[ "$(command -v ansi
   sudo dnf install ansible
 fi
 
-CMD="ansible-galaxy install -r requirements.yaml --force && ansible-playbook $(hostname).yaml --ask-become-pass"
+CMD="ansible-playbook $(hostname).yaml -i hosts.yaml"
 echo "Do you want to run \`$CMD\` (this is last step, ^C if don't wanna continue)"
-echo "$CMD" | wl-copy
+echo -n "$CMD" | wl-copy
 echo "The command sent to clipboard!"
 read -r
 
